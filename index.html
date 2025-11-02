@@ -1,0 +1,107 @@
+<!--<!DOCTYPE html>
+<html>
+<head>
+    <title>Hey Future Me - Career Coach</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            background-color: #f4f4f4;
+        }
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 25px;
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎯 Hey Future Me</h1>
+    <p>Tell me your interests, skills, and goals:</p>
+    <form method="POST" action="/result">
+        <textarea name="user_input" placeholder="Eg: I love psychology and design..."></textarea><br><br>
+        <button type="submit">Generate Roadmap</button>
+    </form>
+</body>
+</html>
+-->
+
+<!-- File: templates/home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hey Future Me</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">🎯 Hey Future Me</div>
+        <div class="nav-links">
+            <a href="/login" class="btn">Login</a>
+            <a href="/signup" class="btn btn-secondary">Sign Up</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Welcome to Hey Future Me</h1>
+        <p>Your AI-powered Career Roadmap Assistant.</p>
+        <a href="/login" class="cta-btn">Get Started</a>
+    </section>
+</body>
+</html>
+
+<!-- File: templates/login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Hey Future Me</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Login</h2>
+        <form action="/login" method="POST">
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit" class="btn">Login</button>
+        </form>
+        <p>Don't have an account? <a href="/signup">Sign Up</a></p>
+    </div>
+</body>
+</html>
+
+<!-- File: templates/signup.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Hey Future Me</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Sign Up</h2>
+        <form action="/signup" method="POST">
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+            <button type="submit" class="btn">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="/login">Login</a></p>
+    </div>
+</body>
+</html>
